@@ -13,41 +13,21 @@ meta:
     body_field: "正文"
     doc_link_field: "飞书文档"
 
+# 以下为示例信息源，仅供参考。
+# 实际使用时建议自行搜索、验证并筛选适合你的信息源。
+# 推荐工具：feedparser（Python）验证 RSS 有效性，Feedly/Inoreader 预览内容质量。
 sources:
-  # 综合宠物媒体（已验证有效）
   - name: AKC
     url: https://www.akc.org/expert-advice/feed/
-    type: en_media
-  - name: Dogington Post
-    url: https://www.dogingtonpost.com/feed/
-    type: en_media
-  - name: Whole Dog Journal
-    url: https://www.whole-dog-journal.com/feed/
     type: en_media
   - name: Catster
     url: https://www.catster.com/feed/
     type: en_media
-  - name: Dogster
-    url: https://www.dogster.com/feed/
-    type: en_media
-  - name: VetStreet
-    url: https://www.vetstreet.com/feed/
-    type: vet
-  # Reddit 社区（已验证有效）
   - name: r/dogs
     url: https://www.reddit.com/r/dogs.rss
     type: reddit
   - name: r/cats
     url: https://www.reddit.com/r/cats.rss
-    type: reddit
-  - name: r/Dogtraining
-    url: https://www.reddit.com/r/Dogtraining.rss
-    type: reddit
-  - name: r/CatAdvice
-    url: https://www.reddit.com/r/CatAdvice.rss
-    type: reddit
-  - name: r/puppy101
-    url: https://www.reddit.com/r/puppy101.rss
     type: reddit
 
 sections:

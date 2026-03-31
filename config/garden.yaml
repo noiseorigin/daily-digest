@@ -13,30 +13,18 @@ meta:
     body_field: "正文"
     doc_link_field: "飞书文档"
 
+# 以下为示例信息源，仅供参考。
+# 实际使用时建议自行搜索、验证并筛选适合你的信息源。
+# 推荐工具：feedparser（Python）验证 RSS 有效性，Feedly/Inoreader 预览内容质量。
 sources:
-  - name: Garden Rant
-    url: https://gardenrant.com/feed
-    type: blog
   - name: Garden Therapy
     url: https://gardentherapy.ca/feed/
     type: blog
   - name: Savvy Gardening
     url: https://savvygardening.com/feed/
     type: blog
-  - name: Gardening Know How
-    url: https://www.gardeningknowhow.com/feed
-    type: blog
-  - name: Fine Gardening
-    url: https://www.finegardening.com/feed
-    type: blog
   - name: r/gardening
     url: https://www.reddit.com/r/gardening.rss
-    type: reddit
-  - name: r/vegetablegardening
-    url: https://www.reddit.com/r/vegetablegardening.rss
-    type: reddit
-  - name: r/containergardening
-    url: https://www.reddit.com/r/containergardening.rss
     type: reddit
   - name: r/houseplants
     url: https://www.reddit.com/r/houseplants.rss

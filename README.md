@@ -188,9 +188,25 @@ fixed_footer:     # 固定结尾（每期不变，如品牌介绍、常用链接
 - RSS 源抓不到时自动跳过，不影响其他源
 - 固定结尾（`fixed_footer`）每期保持一致，有新展览/活动时手动更新 `current_show`
 
----
+## 关于信息源
 
-## 依赖
+配置文件中的 `sources` 仅为示例，每个主题只保留了 3-4 个代表性信息源。
+
+**信息源的质量直接决定日报的质量，需要人工判断。** 建议在使用前：
+
+1. 用 `feedparser` 验证 RSS 地址是否有效、更新是否活跃
+2. 订阅后预览内容，判断是否符合你的受众和调性
+3. 保持 6-12 个信息源，覆盖不同角度（媒体 + 社区 + 专业）
+4. 定期检查和更新，淘汰停更或质量下降的源
+
+```python
+# 快速验证 RSS 是否有效
+import feedparser
+f = feedparser.parse("https://example.com/feed")
+print(len(f.entries), f.entries[0].title if f.entries else "no entries")
+```
+
+---
 
 ```
 feedparser

@@ -5,6 +5,5 @@ __pycache__/
 *.pyc
 .DS_Store
 
-# 不要提交真实的 token（确保 yaml 里只有占位符）
-# 如果你 fork 后填了真实 token，记得加到这里
-# config/my-private-topic.yaml
+# 完整信息源配置（含个人筛选的全量 RSS 源，不公开）
+config/*.full.yaml

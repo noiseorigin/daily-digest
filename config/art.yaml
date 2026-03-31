@@ -13,6 +13,9 @@ meta:
     body_field: "正文"
     doc_link_field: "飞书文档"
 
+# 以下为示例信息源，仅供参考。
+# 实际使用时建议自行搜索、验证并筛选适合你的信息源。
+# 推荐工具：feedparser（Python）验证 RSS 有效性，Feedly/Inoreader 预览内容质量。
 sources:
   - name: Artforum
     url: https://www.artforum.com/feed/
@@ -20,32 +23,11 @@ sources:
   - name: Hyperallergic
     url: https://hyperallergic.com/feed/
     type: en_media
-  - name: The Art Newspaper
-    url: https://www.theartnewspaper.com/rss.xml
-    type: en_media
-  - name: ARTnews
-    url: https://www.artnews.com/feed/
-    type: en_media
-  - name: Artnet News
-    url: https://news.artnet.com/feed/
-    type: en_media
-  - name: Frieze
-    url: https://www.frieze.com/feed
-    type: en_media
-  - name: Colossal
-    url: https://www.thisiscolossal.com/feed/
-    type: en_media
-  - name: Contemporary Art Daily
-    url: https://www.contemporaryartdaily.com/feed/
-    type: en_media
   - name: e-flux
     url: https://www.e-flux.com/rss/
     type: theory
   - name: r/ContemporaryArt
     url: https://www.reddit.com/r/ContemporaryArt.rss
-    type: reddit
-  - name: r/Art
-    url: https://www.reddit.com/r/Art.rss
     type: reddit
 
 sections:
