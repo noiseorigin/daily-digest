@@ -1,0 +1,174 @@
+meta:
+  name: 家庭园艺日报
+  title_template: "🌿 家庭园艺日报 — {date}"
+  doc_title_template: "🌿 家庭园艺日报 — {date}"
+  card_header: "花园小报"
+  card_vol_prefix: "VOL."
+  card_intro_template: "本期聚焦{top_topics}，以及节气提醒与社区热帖。"
+  language: zh
+  bitable:
+    app_token: "YOUR_APP_TOKEN"   # 替换为你的 Bitable app token
+    table_id: "YOUR_TABLE_ID"     # 替换为你的 table id
+    title_field: "标题"
+    body_field: "正文"
+    doc_link_field: "飞书文档"
+
+sources:
+  - name: Garden Rant
+    url: https://gardenrant.com/feed
+    type: blog
+  - name: Garden Therapy
+    url: https://gardentherapy.ca/feed/
+    type: blog
+  - name: Savvy Gardening
+    url: https://savvygardening.com/feed/
+    type: blog
+  - name: Gardening Know How
+    url: https://www.gardeningknowhow.com/feed
+    type: blog
+  - name: Fine Gardening
+    url: https://www.finegardening.com/feed
+    type: blog
+  - name: r/gardening
+    url: https://www.reddit.com/r/gardening.rss
+    type: reddit
+  - name: r/vegetablegardening
+    url: https://www.reddit.com/r/vegetablegardening.rss
+    type: reddit
+  - name: r/containergardening
+    url: https://www.reddit.com/r/containergardening.rss
+    type: reddit
+  - name: r/houseplants
+    url: https://www.reddit.com/r/houseplants.rss
+    type: reddit
+
+sections:
+  - id: lead
+    title: "Lead Story"
+    label: "主打故事"
+    max_items: 1
+    keywords: []
+    strategy: top_pick  # 取所有条目中最值得行动的一条
+  - id: editor_picks
+    title: "Editor's Picks"
+    label: "编辑精选"
+    max_items: 3
+    keywords: [how to, tip, guide, diy, recipe, make, grow, plant, harvest, prune, seed]
+  - id: seasonal
+    title: "Seasonal Tips"
+    label: "节气提醒"
+    max_items: 2
+    keywords: [spring, summer, fall, winter, season, april, may, qingming, frost, temperature]
+  - id: plant_spotlight
+    title: "Plant Spotlight"
+    label: "植物推荐"
+    max_items: 1
+    strategy: rotating  # 使用 rotating_content
+  - id: community
+    title: "Community"
+    label: "社区热帖"
+    max_items: 3
+    source_type: reddit  # 直接映射 source type
+  - id: qa
+    title: "Q&A"
+    label: "常见问题"
+    max_items: 2
+    keywords: [why, how, what, problem, issue, help, yellow, dying, pest, disease]
+  - id: outro
+    title: "Calendar & Outro"
+    label: "本月待办"
+    strategy: static  # 使用 static_content
+
+rotating_content:
+  plant_spotlight:
+    - name: 虎皮兰
+      latin: "Sansevieria / Snake Plant"
+      emoji: "🐍"
+      reasons:
+        - 极耐旱，忘浇水也不容易死，非常适合新手
+        - 耐阴，放在光线不足的角落也能活
+        - 净化空气，能吸收甲醛和苯
+        - 生长缓慢，不需要频繁换盆
+      care: 每2-4周浇一次，宁干勿湿；耐阴但喜散射光；排水好的沙质土
+      pet_safe: false
+      pet_note: 对猫狗有毒，误食会引起恶心、呕吐。建议放在宠物够不到的高处。
+
+    - name: 绿萝
+      latin: "Pothos / Epipremnum aureum"
+      emoji: "🌿"
+      reasons:
+        - 生命力极强，几乎不会死，新手首选
+        - 可水培也可土培，养法灵活
+        - 生长快，成就感强
+        - 净化空气效果好
+      care: 土干了再浇；散射光即可，避免强直射；普通盆栽土
+      pet_safe: false
+      pet_note: 对猫狗有毒，含草酸钙，误食会刺激口腔。有宠物家庭建议悬挂高处。
+
+    - name: 多肉植物（石莲花属）
+      latin: "Echeveria"
+      emoji: "🌵"
+      reasons:
+        - 造型美观，颜色丰富，拍照好看
+        - 耐旱，浇水频率低，适合忙碌的人
+        - 品种多样，收集乐趣大
+        - 小巧，适合桌面摆放
+      care: 每1-2周浇一次，冬天更少；需要充足阳光（4小时以上）；多肉专用土
+      pet_safe: true
+      pet_note: 大多数石莲花属对猫狗无毒，是宠物家庭的安全选择。
+
+    - name: 吊兰
+      latin: "Chlorophytum comosum / Spider Plant"
+      emoji: "🕷️"
+      reasons:
+        - 生命力强，几乎不需要特别照料
+        - 会长出可爱的「小宝宝」，可以分株繁殖
+        - 净化空气效果出色
+        - 悬挂种植效果很好看
+      care: 土微干时浇水；耐阴，散射光即可；普通盆栽土
+      pet_safe: true
+      pet_note: 对猫狗无毒，是宠物家庭的安全选择之一。
+
+    - name: 芦荟
+      latin: "Aloe vera"
+      emoji: "🌱"
+      reasons:
+        - 实用性强，叶片凝胶可用于晒伤和小割伤
+        - 极耐旱，浇水频率极低
+        - 外形独特，有装饰感
+        - 繁殖容易，会长出侧芽
+      care: 每3-4周浇一次，冬天更少；需要充足阳光；排水好的沙质土
+      pet_safe: false
+      pet_note: 对猫狗有毒，误食会引起呕吐和腹泻。建议放在宠物够不到的地方。
+
+    - name: 薄荷
+      latin: "Mentha / Mint"
+      emoji: "🌿"
+      reasons:
+        - 生长旺盛，几乎不会死
+        - 可以直接用于烹饪和泡茶，实用性强
+        - 香气清新，有驱虫效果
+        - 水培也能活，非常好养
+      care: 保持土壤湿润；喜光，每天4小时以上；普通盆栽土；注意控制蔓延
+      pet_safe: false
+      pet_note: 薄荷精油对猫有毒，但少量接触通常无害。建议适当隔离。
+
+    - name: 仙人掌
+      latin: "Cactus"
+      emoji: "🌵"
+      reasons:
+        - 最耐旱的植物之一，出差一个月也没问题
+        - 品种极多，造型各异
+        - 不需要频繁施肥
+        - 适合阳光充足的窗台
+      care: 夏天每2-3周浇一次，冬天几乎不浇；需要充足阳光；仙人掌专用土
+      pet_safe: false
+      pet_note: 仙人掌本身无毒，但刺会伤害宠物。建议放在宠物够不到的地方。
+
+fixed_footer:
+  title: "🌿 每日园艺提示"
+  content: "记录你的种植日记，追踪每株植物的生长状态。"
+  # 可选：填入你的应用或网站链接
+  # link:
+  #   text: 你的应用名称
+  #   url: https://your-app.com

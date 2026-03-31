@@ -1,0 +1,116 @@
+meta:
+  name: 宠物日报
+  title_template: "🐾 宠物日报 — {date}"
+  doc_title_template: "🐾 宠物日报 — {date}"
+  card_header: "宠物日报"
+  card_vol_prefix: "PET."
+  card_intro_template: "本期聚焦{top_topics}，以及训练技巧与社区热帖。"
+  language: zh
+  bitable:
+    app_token: "YOUR_APP_TOKEN"   # 替换为你的 Bitable app token
+    table_id: "YOUR_TABLE_ID"     # 替换为你的 table id
+    title_field: "标题"
+    body_field: "正文"
+    doc_link_field: "飞书文档"
+
+sources:
+  # 综合宠物媒体（已验证有效）
+  - name: AKC
+    url: https://www.akc.org/expert-advice/feed/
+    type: en_media
+  - name: Dogington Post
+    url: https://www.dogingtonpost.com/feed/
+    type: en_media
+  - name: Whole Dog Journal
+    url: https://www.whole-dog-journal.com/feed/
+    type: en_media
+  - name: Catster
+    url: https://www.catster.com/feed/
+    type: en_media
+  - name: Dogster
+    url: https://www.dogster.com/feed/
+    type: en_media
+  - name: VetStreet
+    url: https://www.vetstreet.com/feed/
+    type: vet
+  # Reddit 社区（已验证有效）
+  - name: r/dogs
+    url: https://www.reddit.com/r/dogs.rss
+    type: reddit
+  - name: r/cats
+    url: https://www.reddit.com/r/cats.rss
+    type: reddit
+  - name: r/Dogtraining
+    url: https://www.reddit.com/r/Dogtraining.rss
+    type: reddit
+  - name: r/CatAdvice
+    url: https://www.reddit.com/r/CatAdvice.rss
+    type: reddit
+  - name: r/puppy101
+    url: https://www.reddit.com/r/puppy101.rss
+    type: reddit
+
+sections:
+  - id: health
+    title: "🏥 健康与医疗"
+    max_items: 3
+    keywords: [health, vet, veterinary, disease, symptom, sick, vaccine, nutrition, diet, food, allergy, dental]
+  - id: behavior
+    title: "🧠 行为与训练"
+    max_items: 3
+    keywords: [training, behavior, trick, command, anxiety, aggression, bark, bite, socialization, puppy, kitten]
+  - id: care
+    title: "✂️ 日常护理"
+    max_items: 2
+    keywords: [grooming, bath, nail, brush, clean, care, hygiene, shed, coat, fur]
+  - id: lifestyle
+    title: "🌟 生活方式"
+    max_items: 2
+    keywords: [travel, adopt, rescue, toy, product, gear, accessory, walk, exercise, enrichment]
+  - id: vet_science
+    title: "🔬 兽医科学"
+    max_items: 2
+    source_type: vet
+  - id: community
+    title: "💬 社区热帖"
+    max_items: 3
+    source_type: reddit
+
+rotating_content:
+  fact:
+    - title: 狗狗的鼻纹像人类的指纹
+      body: 每只狗的鼻纹都是独一无二的，就像人类的指纹一样。加拿大已有公司提供狗鼻纹识别服务，用于宠物身份认证。
+
+    - title: 猫咪的喉咙振动有治愈效果
+      body: 猫咪发出的呼噜声频率在25-150赫兹之间，这个频率范围被证明有助于骨骼愈合和减轻疼痛。有研究表明，养猫的人心脏病发作风险比不养猫的人低40%。
+
+    - title: 狗狗能嗅出人类的情绪
+      body: 狗狗的嗅觉比人类灵敏10,000到100,000倍。研究表明，它们能通过气味分辨人类的恐惧、快乐和悲伤，并会相应调整自己的行为。
+
+    - title: 猫咪每天睡12-16小时
+      body: 猫咪是天生的伏击型猎手，需要大量睡眠来储存能量。即使是家猫，这种本能依然保留——它们的睡眠时间占一生的三分之二。
+
+    - title: 狗狗有三种眼睑
+      body: 狗狗有三个眼睑：上眼睑、下眼睑，以及一个叫做「第三眼睑」（瞬膜）的半透明膜，位于眼角内侧，用于保护眼球和分泌泪液。
+
+    - title: 猫咪不能尝出甜味
+      body: 猫咪是少数缺乏甜味受体的哺乳动物之一。这是因为它们是纯肉食动物，在进化过程中失去了感知甜味的基因，对糖分没有任何兴趣。
+
+    - title: 狗狗的年龄换算不是简单乘以7
+      body: 「狗1岁=人7岁」的说法并不准确。研究发现，狗狗在幼年期老化极快，1岁时相当于人类约30岁；之后老化速度放缓，大型犬比小型犬老化更快。
+
+    - title: 猫咪用尾巴表达情绪
+      body: 尾巴竖直表示友好和自信；尾巴蓬松表示恐惧或愤怒；尾巴缓慢摇摆表示专注；尾巴快速抽动表示烦躁。读懂猫咪的尾巴语言，能大大改善人猫关系。
+
+    - title: 狗狗会做梦
+      body: 研究表明，狗狗在睡眠的 REM 阶段会做梦，梦境内容通常与白天的活动有关。小型犬比大型犬做梦更频繁，幼犬和老年犬的梦境也比成年犬更多。
+
+    - title: 猫咪的胡须是精密传感器
+      body: 猫咪的胡须（触须）根部有丰富的神经末梢，能感知气流变化、判断空间大小，甚至探测猎物的移动。胡须的宽度通常与猫咪身体最宽处相当，帮助它们判断能否通过狭窄空间。
+
+fixed_footer:
+  title: "🐾 宠物友好提示"
+  content: "每期提醒：家中常见植物中，虎皮兰、绿萝、百合对猫狗有毒。养宠物前请检查家中植物安全性。"
+  links:
+    - text: ASPCA 有毒植物数据库
+      url: https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants

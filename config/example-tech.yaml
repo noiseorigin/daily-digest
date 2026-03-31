@@ -1,0 +1,96 @@
+# 这是一个新主题配置示例：科技日报
+# 复制此文件，修改以下字段即可上线新主题：
+#   1. meta（名称、标题模板、bitable 信息）
+#   2. sources（RSS 源列表）
+#   3. sections（板块 + 关键词）
+#   4. rotating_content（轮换内容池，至少 7 条）
+#   5. fixed_footer（固定结尾）
+
+meta:
+  name: 科技日报（示例）
+  title_template: "💻 科技日报 — {date}"
+  doc_title_template: "💻 科技日报 — {date}"
+  card_header: "科技速递"
+  card_vol_prefix: "TECH."
+  card_intro_template: "本期聚焦{top_topics}，以及产品动态与社区热议。"
+  language: zh
+  bitable:
+    app_token: "YOUR_APP_TOKEN"       # 替换为实际 bitable token
+    table_id: "YOUR_TABLE_ID"         # 替换为实际 table id
+    title_field: "标题"
+    body_field: "正文"
+    doc_link_field: "飞书文档"
+
+sources:
+  - name: Hacker News
+    url: https://news.ycombinator.com/rss
+    type: community
+  - name: The Verge
+    url: https://www.theverge.com/rss/index.xml
+    type: en_media
+  - name: Wired
+    url: https://www.wired.com/feed/rss
+    type: en_media
+  - name: MIT Technology Review
+    url: https://www.technologyreview.com/feed/
+    type: en_media
+  - name: r/technology
+    url: https://www.reddit.com/r/technology.rss
+    type: reddit
+  - name: r/MachineLearning
+    url: https://www.reddit.com/r/MachineLearning.rss
+    type: reddit
+
+sections:
+  - id: ai
+    title: "🤖 AI 与机器学习"
+    max_items: 3
+    keywords: [ai, artificial intelligence, machine learning, llm, gpt, model, openai, anthropic, google]
+  - id: product
+    title: "📱 产品与发布"
+    max_items: 3
+    keywords: [launch, release, announce, new, update, version, app, product, feature]
+  - id: industry
+    title: "🏢 行业动态"
+    max_items: 2
+    keywords: [funding, acquisition, ipo, layoff, hire, ceo, startup, company, billion]
+  - id: open_source
+    title: "🔓 开源与开发者"
+    max_items: 2
+    keywords: [open source, github, developer, api, sdk, framework, library, tool]
+  - id: community
+    title: "💬 社区热议"
+    max_items: 3
+    source_type: reddit
+
+rotating_content:
+  fact:
+    - title: 第一个网页至今仍在线
+      body: 蒂姆·伯纳斯-李于1991年发布的第一个网页（info.cern.ch）至今仍可访问，内容是关于万维网项目的介绍。
+
+    - title: Python 的名字来自喜剧
+      body: Python 的创始人 Guido van Rossum 在圣诞节假期写出了这门语言，并以英国喜剧团体「蒙提·派森」（Monty Python）命名，而非蟒蛇。
+
+    - title: 第一个计算机 bug 是真实的虫子
+      body: 1947年，Grace Hopper 的团队在 Mark II 计算机中发现了一只飞蛾导致的故障，并将其贴在日志本上，这是「bug」一词用于计算机错误的最早记录。
+
+    - title: 互联网最初只有 4 台电脑
+      body: 1969年，ARPANET（互联网前身）首次连接时，只有 4 个节点：UCLA、斯坦福研究院、UC 圣塔芭芭拉和犹他大学。
+
+    - title: 第一封垃圾邮件发送于 1978 年
+      body: 第一封大规模垃圾邮件由 DEC 公司的 Gary Thuerk 于1978年发送给 ARPANET 上的 393 个用户，推销新型计算机。他因此被称为「垃圾邮件之父」。
+
+    - title: Linux 内核最初只有 10,000 行代码
+      body: Linus Torvalds 于1991年发布 Linux 0.01 时，内核只有约 10,000 行代码。如今 Linux 内核已超过 3000 万行代码，由全球数千名开发者维护。
+
+    - title: 第一个域名注册于 1985 年
+      body: 第一个注册的 .com 域名是 symbolics.com，由 Symbolics 公司于1985年3月15日注册。这家公司已于2009年停止运营，但该域名至今仍在线。
+
+fixed_footer:
+  title: "🔗 本期推荐工具"
+  content: "每期精选一个开发者工具或效率应用。"
+  # 每期手动更新推荐工具
+  # current_pick:
+  #   name: 工具名称
+  #   desc: 一句话介绍
+  #   link: https://...

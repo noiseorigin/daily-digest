@@ -1,0 +1,125 @@
+meta:
+  name: 当代艺术日报
+  title_template: "🎨 当代艺术日报 — {date}"
+  doc_title_template: "🎨 当代艺术日报 — {date}"
+  card_header: "当代艺术日报"
+  card_vol_prefix: "ART."
+  card_intro_template: "本期聚焦{top_topics}，以及市场动态与社区热议。"
+  language: zh
+  bitable:
+    app_token: "YOUR_APP_TOKEN"   # 替换为你的 Bitable app token
+    table_id: "YOUR_TABLE_ID"     # 替换为你的 table id
+    title_field: "标题"
+    body_field: "正文"
+    doc_link_field: "飞书文档"
+
+sources:
+  - name: Artforum
+    url: https://www.artforum.com/feed/
+    type: en_media
+  - name: Hyperallergic
+    url: https://hyperallergic.com/feed/
+    type: en_media
+  - name: The Art Newspaper
+    url: https://www.theartnewspaper.com/rss.xml
+    type: en_media
+  - name: ARTnews
+    url: https://www.artnews.com/feed/
+    type: en_media
+  - name: Artnet News
+    url: https://news.artnet.com/feed/
+    type: en_media
+  - name: Frieze
+    url: https://www.frieze.com/feed
+    type: en_media
+  - name: Colossal
+    url: https://www.thisiscolossal.com/feed/
+    type: en_media
+  - name: Contemporary Art Daily
+    url: https://www.contemporaryartdaily.com/feed/
+    type: en_media
+  - name: e-flux
+    url: https://www.e-flux.com/rss/
+    type: theory
+  - name: r/ContemporaryArt
+    url: https://www.reddit.com/r/ContemporaryArt.rss
+    type: reddit
+  - name: r/Art
+    url: https://www.reddit.com/r/Art.rss
+    type: reddit
+
+sections:
+  - id: exhibition
+    title: "🖼️ 展览动态"
+    max_items: 3
+    keywords: [exhibition, show, gallery, museum, biennale, fair, opens, opening, retrospective, survey]
+  - id: artist
+    title: "🎨 艺术家聚焦"
+    max_items: 3
+    keywords: [artist, painter, sculptor, photographer, artwork, work, piece, portrait, studio, dead, obituary]
+  - id: market
+    title: "💰 市场与拍卖"
+    max_items: 2
+    keywords: [auction, sale, sold, price, record, collector, sotheby, christie, phillips, market, departs, ceo]
+  - id: theory
+    title: "📖 策展与理论"
+    max_items: 2
+    source_type: theory
+    keywords: [essay, theory, critique, curatorial, discourse, politics, identity, decolonial, feminist]
+  - id: digital
+    title: "💻 数字与新媒体"
+    max_items: 2
+    keywords: [digital, nft, ai art, generative, virtual, immersive, tech, algorithm]
+  - id: community
+    title: "💬 社区热议"
+    max_items: 3
+    source_type: reddit
+
+rotating_content:
+  fact:
+    - title: 白色画布不是空白
+      body: 罗伯特·劳森伯格（Robert Rauschenberg）1951年的《白色绘画》系列，是一组纯白画布。约翰·凯奇看到后受到启发，创作了著名的《4'33''》——一首完全沉默的乐曲。
+
+    - title: 杜尚的小便池改变了艺术史
+      body: 1917年，马塞尔·杜尚将一个普通小便池命名为《泉》提交展览。这件作品被拒展，却成为20世纪最重要的艺术概念之一：现成品（Readymade）——任何物体都可以是艺术。
+
+    - title: 弗里达·卡罗的画几乎都是自画像
+      body: 弗里达·卡罗一生创作了约143幅画，其中55幅是自画像。她说：「我画自己，因为我是我最了解的主题。」
+
+    - title: 波洛克的滴画有数学规律
+      body: 物理学家研究发现，杰克逊·波洛克的滴画中存在分形几何结构，与自然界的树枝、海岸线相似。这种复杂性随着他技艺的成熟而增加。
+
+    - title: 草间弥生的圆点来自幻觉
+      body: 草间弥生从小就有幻觉，看到圆点和网格覆盖一切。她通过不断画圆点来「消解」这种恐惧，最终将个人的心理困境转化为全球最具辨识度的艺术语言。
+
+    - title: 安迪·沃霍尔的工厂不只是工作室
+      body: 沃霍尔的「工厂」（The Factory）是1960年代纽约最重要的文化沙龙，聚集了艺术家、音乐人、演员、作家。他刻意用「工厂」这个词，挑战艺术家单打独斗的浪漫神话。
+
+    - title: 艺术品的价格有时是概念本身
+      body: 达明安·赫斯特2008年直接在苏富比拍卖自己的新作，绕过画廊，单日成交额超过1.1亿英镑。这一天，雷曼兄弟宣布破产。
+
+    - title: 威尼斯双年展是最古老的国际艺术展
+      body: 威尼斯双年展创立于1895年，比奥运会现代复兴（1896年）还早一年。它最初是意大利国家展览，后来演变为全球当代艺术最重要的舞台之一。
+
+    - title: 村上隆创造了「超扁平」
+      body: 村上隆提出「超扁平」（Superflat）理论，认为日本战后文化——动漫、漫画、消费主义——是一种独特的美学，与西方现代主义平行，而非从属。
+
+    - title: 艾未未的葵花籽装置用了1亿粒
+      body: 艾未未2010年在泰特现代美术馆展出《葵花籽》，地板上铺满1亿粒手工制作的陶瓷葵花籽，每粒都由景德镇工匠单独绘制，探讨大规模生产与个体劳动的关系。
+
+fixed_footer:
+  title: "🖼️ 关于本日报"
+  tagline: "当代艺术 · 全球视野"
+  content: "本日报聚合全球主要当代艺术媒体与社区内容，每日更新。"
+  # 有展览时填写，无展览时注释掉
+  # current_show:
+  #   title: 展览名称
+  #   dates: "2026年X月X日 — X月X日"
+  #   blurb: 一句话介绍
+  #   link: https://...
+  # 可选：填入你的画廊或机构链接
+  # links:
+  #   - text: 官网
+  #     url: https://your-gallery.com
+  #   - text: Instagram
+  #     url: https://www.instagram.com/your-gallery/
